@@ -21,11 +21,22 @@ public class Main {
         System.out.println();
         System.out.println("-----------------------------------------------");
 
-        double tipamount = bill * ((double)tip / 100); //gives the unestimated tip amount
-        double t = tipamount % 0.01;
-        double acctipamount = tipamount - t;
+        double tipamount = bill * ((double)tip / 100);      //gives the unestimated tip amount
+        double t = tipamount % 0.01;                       //basically a way to isolate any number past the hundredth place
+        double acctipamount = tipamount - t;              //subtracts the unestimated tip amount and any numbers past the hundredth place
+                                                         //example: 123.456 - 0.006 (I don't actually know how to truly estimate)
 
-        System.out.println(acctipamount);
+        System.out.println("Total tip amount: $" + acctipamount);
+
+        double totalbillamount = bill + acctipamount;
+        System.out.println("Your total bill cost: $" + totalbillamount);
+
+        double tipperperson = acctipamount / people;      //same thing as the directions for Tip Amount
+        double tp = tipperperson % 0.01;
+        double acctipperperson = tipperperson - tp;
+
+        System.out.println("Tip per person: $" + acctipperperson);
+
 
 
 
