@@ -33,10 +33,15 @@ public class Main {
 
         double tipperperson = acctipamount / people;      //same thing as the directions for Tip Amount
         double tp = tipperperson % 0.01;
-        double acctipperperson = tipperperson - tp;
+        double acctipperperson = tipperperson - tp;      // acc means "actual"
 
         System.out.println("Tip per person: $" + acctipperperson);
 
+        double totalbillperperson = totalbillamount / people;
+        double tbpp =  totalbillperperson % 0.01;
+        double acctbpp = totalbillperperson - tbpp;
+
+        System.out.println("The total bill per person is: $" + acctbpp);       // acctbpp mean "Actual total bill per person"
 
 
 
